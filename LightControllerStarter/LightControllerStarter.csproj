@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ExternalBrandFloorLampAdapter\ExternalBrandFloorLampAdapter.csproj" />
+    <ProjectReference Include="..\ExternalBrandFloorLamp\ExternalBrandFloorLamp.csproj" />
+    <ProjectReference Include="..\ExternalBrandSoundSensorAdapter\ExternalBrandSoundSensorAdapter.csproj" />
+    <ProjectReference Include="..\ExternalBrandSoundSensor\ExternalBrandSoundSensor.csproj" />
+    <ProjectReference Include="..\LightController\LightController.csproj" />
+    <ProjectReference Include="..\Lights\Lights.csproj" />
+    <ProjectReference Include="..\OwnBrandCeilingLight\OwnBrandCeilingLight.csproj" />
+    <ProjectReference Include="..\OwnBrandMotionSensor1\OwnBrandMotionSensor1.csproj" />
+    <ProjectReference Include="..\OwnBrandMotionSensor2\OwnBrandMotionSensor2.csproj" />
+    <ProjectReference Include="..\OwnBrandMultiSensor\OwnBrandMultiSensor.csproj" />
+    <ProjectReference Include="..\OwnBrandSoundSensor\OwnBrandSoundSensor.csproj" />
+    <ProjectReference Include="..\Sensors\Sensors.csproj" />
+  </ItemGroup>
+
+</Project>
