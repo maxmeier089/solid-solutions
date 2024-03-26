@@ -1,7 +1,10 @@
 ﻿namespace ATM
 {
-    public class AutomaticTellerMachine
+    public class ATM
     {
+
+        public static IUserInterface UI { get; set; } = new ConsoleUserInterface();
+
 
         private readonly AccountManager accountManager = new();
 
@@ -13,7 +16,7 @@
 
             if (account == null)
             {
-                Console.WriteLine("Unknown account.");
+                ATM.UI.DisplayMessage("Unknown account.");
                 return;
             }
 
@@ -22,12 +25,12 @@
 
             if (!pinVerified)
             {
-                Console.WriteLine("Bye.");
+                ATM.UI.DisplayMessage("Bye.");
                 return;
             }
 
             // PIN ok!
-            Console.WriteLine("Welcome " + account.Name + "!");
+            ATM.UI.DisplayMessage("Welcome " + account.Name + "!");
 
             // Perform tasks
             CheckWhatUserWantsToDo(account);
@@ -35,16 +38,16 @@
 
         void CheckWhatUserWantsToDo(Account account)
         {
-            Console.WriteLine("\nWhat do you want to do?");
+            ATM.UI.DisplayMessage("\nWhat do you want to do?");
 
             static void askIfUserWantsSomethingElse()
             {
-                Console.WriteLine("\nDo you want to do something else? (y/n)");
+                ATM.UI.DisplayMessage("\nDo you want to do something else?");
             }
 
             while (true)
             {
-                Console.WriteLine(
+                ATM.UI.DisplayMessage(
                     "0: Exit\n" +
                     "1: Show Balance\n" +
                     "2: Withdraw\n" +
@@ -52,7 +55,7 @@
                     "4: Transfer"
                     );
 
-                string? input = Console.ReadLine();
+                string? input = ATM.UI.ReadUserInput();
 
                 if (input == "0") break;
                 else if (input == "1")
@@ -78,11 +81,11 @@
                 }
                 else
                 {
-                    Console.WriteLine("Unknown input! (enter 0, 1, 2, 3)");
+                    ATM.UI.DisplayMessage("Unknown input! (enter 0, 1, 2, 3)");
                 }
             }
 
-            Console.WriteLine("Bye!");
+            ATM.UI.DisplayMessage("Bye!");
         }
 
         public Account CreateAccount(string iban, string name, string pin)
@@ -92,7 +95,7 @@
             return account;
         }
 
-        public AutomaticTellerMachine()
+        public ATM()
         {
             accountManager = new AccountManager();
         }

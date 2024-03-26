@@ -15,25 +15,25 @@ namespace ATM
 
         public void ShowBalance()
         {
-            Console.WriteLine("Your balance is: " + string.Format(CultureInfo.CurrentCulture, "{0:c}", Balance));
+            ATM.UI.DisplayMessage("Your balance is: " + string.Format(CultureInfo.CurrentCulture, "{0:c}", Balance));
         }
 
         public void Widthdraw()
         {
-            Console.WriteLine("How much money do you want do withdraw?");
+            ATM.UI.DisplayMessage("How much money do you want do withdraw?");
 
             decimal amount = ReadAmount();
 
             Balance -= amount;
 
-            Console.WriteLine("Please take your money.");
+            ATM.UI.DisplayMessage("Please take your money.");
 
             ShowBalance();
         }
 
         public void Deposit()
         {
-            Console.WriteLine("How much money do you want do deposit?");
+            ATM.UI.DisplayMessage("How much money do you want do deposit?");
 
             decimal amount = ReadAmount();
 
@@ -51,7 +51,7 @@ namespace ATM
         {
             while (true)
             {
-                string? input = Console.ReadLine();
+                string? input = ATM.UI.ReadUserInput();
 
                 if (decimal.TryParse(input, out decimal amount))
                 {
@@ -59,7 +59,7 @@ namespace ATM
                 }
                 else
                 {
-                    Console.WriteLine("Please enter a number!");
+                    ATM.UI.DisplayMessage("Please enter a number!");
                 }
             }
         }

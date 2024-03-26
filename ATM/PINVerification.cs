@@ -9,27 +9,27 @@ namespace ATM
         public static bool CheckPIN(Account account)
         {
             // check PIN
-            Console.WriteLine("Please enter your PIN!");
+            ATM.UI.DisplayMessage("Please enter your PIN!");
 
             int pinTries = 3; // max 3 tries
 
             while (true)
             {
-                string? input = Console.ReadLine();
+                string? input = ATM.UI.ReadUserInput();
 
                 if (VerifyPIN(input, account))
                 {
-                    Console.WriteLine("PIN verified.");
+                    ATM.UI.DisplayMessage("PIN verified.");
                     return true;
                 }
 
                 pinTries--;
 
-                Console.WriteLine("Wrong PIN! " + pinTries + " tries left.");
+                ATM.UI.DisplayMessage("Wrong PIN! " + pinTries + " tries left.");
 
                 if (pinTries == 0)
                 {
-                    Console.WriteLine("3 wrong PINs entered.");
+                    ATM.UI.DisplayMessage("3 wrong PINs entered.");
                     return false;
                 }
             }

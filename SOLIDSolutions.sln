@@ -35,9 +35,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OwnBrandCeilingLight", "Own
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LightControllerStarter", "LightControllerStarter\LightControllerStarter.csproj", "{32F36317-DE02-4345-A73D-C272ED10B91C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExternalBrandFloorLamp", "ExternalBrandFloorLamp\ExternalBrandFloorLamp.csproj", "{E49A32FA-6995-4694-BC79-384C3B6551AA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExternalBrandFloorLamp", "ExternalBrandFloorLamp\ExternalBrandFloorLamp.csproj", "{E49A32FA-6995-4694-BC79-384C3B6551AA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExternalBrandFloorLampAdapter", "ExternalBrandFloorLampAdapter\ExternalBrandFloorLampAdapter.csproj", "{09B154E4-3F36-468D-9786-63824B701AEF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExternalBrandFloorLampAdapter", "ExternalBrandFloorLampAdapter\ExternalBrandFloorLampAdapter.csproj", "{09B154E4-3F36-468D-9786-63824B701AEF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ATMTest", "ATMTest\ATMTest.csproj", "{4EED8692-5EC1-4216-A3EB-C4F36B7EE639}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -105,6 +107,10 @@ Global
 		{09B154E4-3F36-468D-9786-63824B701AEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{09B154E4-3F36-468D-9786-63824B701AEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{09B154E4-3F36-468D-9786-63824B701AEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4EED8692-5EC1-4216-A3EB-C4F36B7EE639}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4EED8692-5EC1-4216-A3EB-C4F36B7EE639}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4EED8692-5EC1-4216-A3EB-C4F36B7EE639}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4EED8692-5EC1-4216-A3EB-C4F36B7EE639}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
